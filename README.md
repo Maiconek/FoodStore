@@ -1,47 +1,23 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/rIQAxPZF)
-# Zadanie: Projekt końcowy
+# FoodStore
+This project was developed as part of the "Design Patterns" course in university.
 
-| Termin oddania | Punkty     |
-|----------------|:-----------|
-| 13.06.2023  23:00   |    20      |
+## Overview
 
---- 
-Przekroczenie terminu o **n** zajęć wiąże się z karą:
-- punkty uzyskanie za realizację zadania są dzielone przez **2<sup>n</sup>**.
+FoodStore is a food store economy simulation in which three primary entities interact with each other:
 
---- 
+1. **Store** - sells and produces new products every round. It verifies inflation at the beginning of every round to adjust its prices according to that.
+2. **Bank** - regulates inflation and monitors store revenue. If the store sells fewer in a round than it did in the previous one, the bank decreases inflation. If the store sells more, inflation increases.
+3. **Customer** - has a list of products to buy and follows a specific buying plan. Each customer has a specific budget and may decide not to buy if product prices exceed that budget.
 
-### Napisz program, który
-* będzie zawierał obiekty o kilku cechach
-* cechy powinny mieć charakter ilościowy, tj. cechy posiadają definiowalne natężenie
-* obiekty można agregować, tworząc nowe obiekty o skumulowanych cechach
-* kumulację należy wyposażyć w reguły powstawania nowych cech agregatu po osiągnięciu odpowiednich poziomów cech skumulowanych
-* przed obiektami stawiamy zadania wymagające posiadania odpowiednich cech w odpowiednim nateżeniu
-* program powiniem odpowiadać na pytanie czy posiadając:
-  * dany zbiór obieków o danych cechach oraz
-  * zbiór regul dotyczących powstawania nowych cech oraz
-  * zbiór zadań do wykonania
-  
-  można tak przeprowadzić agregację obiektów by zrealizować zadania.
+## Design Patterns Implemented
 
-  Dopuszczalne także projekty autorskie.
-  
-### Przykład
-* mrówki: 
-  * mrówka ma pola np. siła, pamięć, zdrowie ... 
-  * mrówki możemy agregować by uzyskać ich roje o nowych właściwościach opisanych regułami tworzenia roju
-  * zadaniem dla mrowiska może być znalezienie i przeniesienie jakiegoś przedmiotu do mrowiska, pokonanie przeszkody, czy pokananie przeciwnika
-* (inny przykład) ...
+The following design patterns are used in the project:
 
-### Techniczny cel zadania 
-W projekcie w nietrywialny sposób wykorzystano po dwa wzorce projektowe z następujących grup:
-* kreacyjne
-* strukturalne
-* operacyjne.
+- **Singleton** - Ensures a single instance of significant components such as the Bank.
+- **Abstract Factory** - Provides an interface to produce different types of products.
+- **Facade** - Enables complex interactions among the Store, Bank, and Customers.
+- **Observer** - Enables objects to react to changing inflation dynamically.
+- **Strategy** - Defines different buying strategies for customers.
+- **Decorator** - Adds or changes product attributes dynamically.
 
-Łącznie trzeba zaprezentować sześć wzorców, które współpracują w jednym projekcie.
 
-Oceniane będą:
-* trafność doboru wzorców
-* jakość implementacji
-* nietrywialność informatyczna wybranego problemu rozwiązywanego przez projekt.
