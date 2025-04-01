@@ -13,11 +13,11 @@ FoodStore is a food store economy simulation in which three primary entities int
 
 The following design patterns are used in the project:
 
-- **Singleton** - Ensures a single instance of significant components such as the Bank.
-- **Abstract Factory** - Provides an interface to produce different types of products.
-- **Facade** - Enables complex interactions among the Store, Bank, and Customers.
-- **Observer** - Enables objects to react to changing inflation dynamically.
-- **Strategy** - Defines different buying strategies for customers.
-- **Decorator** - Adds or changes product attributes dynamically.
+- **Singleton** - ensures a single instance of significant components such as the Bank.
+- **Abstract Factory** - provides an interface to produce different types of products.
+- **Facade** - enables complex interactions among the Store, Bank, and Customers.
+- **Observer** - enables objects to react to changing inflation dynamically.
+- **Strategy** - defines different buying strategies for customers.
+- **Decorator** - adds or changes product attributes dynamically.
 
 
